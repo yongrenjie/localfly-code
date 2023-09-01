@@ -43,7 +43,11 @@
                 >→</button
             >
         </div>
-        <p id="opening">{novels[index].opening}</p>
+        {#each novels as novel, i}
+            {#if i === index}
+                <p id="opening">{novel.opening}</p>
+            {/if}
+        {/each}
     </div>
 </main>
 
