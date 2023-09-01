@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { fly } from "svelte/transition";
+
     let novels = [
         {
             title: "Emma",
@@ -45,7 +47,7 @@
         </div>
         {#each novels as novel, i}
             {#if i === index}
-                <p id="opening">{novel.opening}</p>
+                <p id="opening" transition:fly={{ x: 500 }}>{novel.opening}</p>
             {/if}
         {/each}
     </div>
