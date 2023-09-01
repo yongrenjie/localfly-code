@@ -67,6 +67,7 @@
         border: 2px solid #e688eb;
         padding: 10px;
         width: 300px;
+        overflow-x: hidden;
     }
     div#controls {
         display: flex;
