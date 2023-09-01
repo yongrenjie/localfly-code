@@ -47,7 +47,9 @@
         </div>
         {#each novels as novel, i}
             {#if i === index}
-                <p id="opening" transition:fly={{ x: 500 }}>{novel.opening}</p>
+                <p id="opening" in:fly={{ x: 500 }} out:fly={{ x: -500 }}>
+                    {novel.opening}
+                </p>
             {/if}
         {/each}
     </div>
